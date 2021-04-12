@@ -22,7 +22,7 @@ function checkDatabase() {
   const store = transaction.objectStore("pending");
   
   const getAll = store.getAll();
-  
+
 getAll.onsucess = function(){
     if (getAll.result.length > 0) {
         fetch("/api/transaction/bulk", {
@@ -45,3 +45,5 @@ getAll.onsucess = function(){
     }
 }
 }
+
+window.addEventListener("online", checkDatabse);

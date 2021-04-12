@@ -58,4 +58,4 @@ getAll.onsucess = function(){
 };
 };
 
-window.addEventListener("online", checkDatabse);
+window.addEventListener("online", checkDatabase);

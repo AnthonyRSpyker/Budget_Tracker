@@ -13,7 +13,11 @@ request.onsuccess = function(event){
     if (navigator.onLine){
         checkDatabase();
     }
-}
+};
+
+request.onerror = function(event) {
+    console.log("whoops," + event.target.errorCode)
+};
 
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
@@ -21,7 +25,7 @@ function saveRecord(record) {
     const store = transaction.objectStore("pending");
 
     store.add(record);
-}
+};
 
 function checkDatabase() {
 
@@ -50,8 +54,8 @@ getAll.onsucess = function(){
             store.clear()
         });
 
-    }
-}
-}
+    };
+};
+};
 
 window.addEventListener("online", checkDatabse);

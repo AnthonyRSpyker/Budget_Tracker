@@ -19,7 +19,6 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.2vrku.mongodb.net/budget?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
-  
 });
 
 // routes
